@@ -16,7 +16,6 @@ def main():
 	with db_connect() as conn:
 		with open(output_file, 'w') as fout:
 			cur = conn.cursor(as_dict=True)
-			# cur.execute('select top 100 * from tbl_BBS_Detail')  
 			cur.execute(sql)  
 			row = cur.fetchone()
 
